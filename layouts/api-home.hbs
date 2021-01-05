@@ -1,0 +1,37 @@
+
+{{> header}}
+
+<body>
+
+	{{> nav}}
+
+	<main class="container-fluid px-5">
+
+		<h1 class="display-6 mt-5 mb-5">LetsGraphQL API endpoints</h1>
+
+		{{#each collections.apis}}
+			<div class="card mt-2">
+		  		<div class="card-body">
+					<h5 class="card-title">
+						{{title}}
+					</h5>
+                    <p class="text-muted small">
+						Maintainer:  {{maintainer}}<br />
+						Status:  {{status}}
+					</p>
+					{{{contents}}}
+                    <a href="{{endpoint}}/playground" class="btn btn-sm btn-primary">Try the API</a>
+		            <a href="{{endpoint}}/voyager" class="btn btn-sm btn-primary">View the Data Model</a>
+		            <a href="{{repo}}" class="btn btn-sm btn-primary">GitHub Repo</a>
+		            <a href="{{image}}" class="btn btn-sm btn-primary">Docker Image</a>
+				</div>
+			</div>
+		{{/each}}
+
+
+		{{> footer}}
+
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+{{> header}}
+
+<body>
+
+	{{> nav}}
+
+	<main class="container-fluid px-5">
+
+		<h1 class="display-6 mt-5 mb-5">Blog</h1>
+
+		{{#each collections.posts}}
+			<div class="card mt-2">
+		  		<div class="card-body">
+					<h5 class="card-title">
+						{{title}}
+					</h5>
+					<p class="text-muted">{{author}} - {{date}}</p>
+					<p>{{{abstract}}}</p>
+					<a href="../{{path}}" class="btn btn-sm btn-primary">Read More</a>
+				</div>
+			</div>
+		{{/each}}
+
+
+		{{> footer}}
+
+	</main>
+
+</body>
+</html>
