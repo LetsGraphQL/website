@@ -20,10 +20,11 @@
 						Status:  {{status}}
 					</p>
 					{{{contents}}}
-                    <a href="{{endpoint}}/playground" class="btn btn-sm btn-primary">Try the API</a>
-		            <a href="{{endpoint}}/voyager" class="btn btn-sm btn-primary">View the Data Model</a>
-		            <a href="{{repo}}" class="btn btn-sm btn-primary">GitHub Repo</a>
-		            <a href="{{image}}" class="btn btn-sm btn-primary">Docker Image</a>
+					<p>API endpoint: <code>{{endpoint}}/graphql</code></p>
+                    <a target="_blank" href="{{endpoint}}/playground" class="btn btn-sm btn-primary">Try the API</a>
+		            <a target="_blank" href="{{endpoint}}/voyager" class="btn btn-sm btn-primary">View the Data Model</a>
+		            <a target="_blank" href="{{repo}}" class="btn btn-sm btn-primary">GitHub Repo</a>
+		            <a target="_blank" href="{{image}}" class="btn btn-sm btn-primary">Docker Image</a>
 				</div>
 			</div>
 		{{/each}}
